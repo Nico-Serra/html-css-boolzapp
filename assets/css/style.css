@@ -76,6 +76,20 @@ body{
     height: 10%;
 }
 
+.debug .container-sm{
+    height: 100%;
+}
+
+.debug .top-chat{
+    height: 40%;
+    background-color: gold;
+}
+
+.debug .bottom-chat{
+    height: 40%;
+    background-color: gold;
+}
+
 
 /* #endregion Debug */
 
@@ -106,7 +120,22 @@ body{
     width: 70%;
 }
 
+.container-sm{
+    width: 90%;
+    margin: auto;
+}
 
+.top-chat{
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.bottom-chat{
+    width: 50%;
+    margin-right: 50%;
+}
 /* #endregion right */
 
 /* #endregion web-app */
