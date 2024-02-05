@@ -20,6 +20,7 @@
 
 body{
     height: 100vh;
+    overflow: hidden;
 }
 
 /* #region Debug */
@@ -39,6 +40,26 @@ body{
 
 .debug .right{
     background-color: green;
+}
+
+.debug .profile{
+    background-color: pink;
+    height: 10%;
+}
+
+.debug .notifications{
+    background-color: pink;
+    height: 10%;
+}
+
+.debug .search{
+    background-color:lightsalmon;
+    height: 5%;
+}
+
+.debug .contacts{
+    background-color:lightskyblue;
+    height: 75%;
 }
 
 
