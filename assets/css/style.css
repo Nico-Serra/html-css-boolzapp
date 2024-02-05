@@ -35,7 +35,12 @@ img {
     display: flex;
 }
 
+.pic {
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: 0.5rem;
 
+}
 /* #region utilities */
 
 
@@ -130,17 +135,12 @@ img {
 /* #region profile */
 .profile {
     background-color: var(--bool-lighter);
-    height: 10%;
+    height: 10vh;
     justify-content: space-between;
 
 }
 
-.pic {
-    aspect-ratio: 1;
-    object-fit: cover;
-    padding: 0.5rem;
 
-}
 
 .action {
     align-self: center;
@@ -160,7 +160,7 @@ img {
 
 .notifications{
     background-color: var(--bool-sky);
-    height: 10%;
+    height: 10vh;
     align-items: center;
     gap: 1rem;
 }
@@ -182,6 +182,58 @@ img {
     font-size: 0.8rem;
 }
 /* #endregion notifications */
+
+/* #region search */
+
+.search{
+    height: 7vh;
+    background-color: var(--bool-lighter);
+    align-items: center;
+    color: gray;
+    
+}
+
+.btn-search{
+    gap: 1rem;
+    background-color: var(--bool-light);
+    padding: 0.3rem 1rem;
+    width: 95%;
+    margin: auto;
+}
+
+.btn-search a{
+    color: gray;
+}
+/* #endregion search */
+
+/* #region contacts */
+
+.contacts{
+    height: 68vh;
+    overflow-y: auto;
+    background-color: var(--bool-light);
+}
+
+.recent{
+    height: 10vh;
+    gap: 1rem;
+    border-bottom: 0.1px solid lightgray;
+}
+
+.name, .hour{
+    align-self: center;
+}
+
+.recent p, .recent span{
+    color: gray;
+}
+
+.recent span{
+    font-size: 0.8rem;
+}
+
+/* #region contacts */
+
 
 
 /* #endregion left */
@@ -227,7 +279,7 @@ img {
         width: 10%;
     }
 
-    .action {
+    .action, .notifications, .search ,.name ,.hour{
         display: none;
     }
 
@@ -235,17 +287,11 @@ img {
         width: 90%;
     }
 
-    .notifications {
-        display: none;
+    .contacts {
+        height: 90vh;
     }
 
-    .search {
-        display: none;
-    }
 
-    .debug .contacts {
-        height: 90%;
-    }
 }
 
 @media screen and (max-width:540px) {
