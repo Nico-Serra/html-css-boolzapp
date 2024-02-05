@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0.5px dashed black;
+}
+
+.debug{
+    background-color: black;
+    height: 100vh;
+}
