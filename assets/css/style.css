@@ -110,3 +110,35 @@ body{
 /* #endregion right */
 
 /* #endregion web-app */
+
+/* #region @media */
+
+@media screen and (max-width:991px) {
+    .web-app{
+       width: 100%;
+       height: 100vh;
+       margin: 0;
+    }
+
+    .left{
+        width: 10%;
+    }
+    
+    .right{
+        width: 90%;
+    }
+    
+    .notifications{
+        display: none;
+    }
+
+    .search{
+        display: none;
+    }
+
+    .debug .contacts{
+        height: 90%;
+    }
+}
+
+/* #endregion @media */
