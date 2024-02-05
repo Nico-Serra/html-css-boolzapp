@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 0.5px dashed black;
 }
 
 /* color palette */
@@ -22,7 +21,23 @@ body{
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(to top, rgba(215, 219, 214, 1) 90% ,rgba(0, 150, 136, 1) 50%);
+    font-family: 'Lato', sans-serif;
 }
+
+img{
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/* #region utilities */
+
+.d-flex{
+    display: flex;
+}
+
+
+/* #region utilities */
+
 
 /* #region Debug */
 
@@ -45,7 +60,7 @@ body{
 
 .debug .profile{
     background-color: pink;
-    height: 10%;
+    
 }
 
 .debug .notifications{
@@ -111,6 +126,30 @@ body{
     width: 30%;
 }
 
+.profile{
+    background-color: var(--bool-lighter);
+    height: 10%;
+    justify-content: space-between;
+    padding: 0.5rem;
+
+}
+
+.pic{
+    aspect-ratio: 1;
+    object-fit: cover;
+    
+}
+
+.action{
+    align-self: center;
+}
+
+.action a{
+    color: var(--bool-icon);
+    text-decoration: none;
+    font-size: x-large;
+    padding: 0 0.5rem;
+}
 
 /* #endregion left */
 
@@ -152,6 +191,10 @@ body{
 
     .left{
         width: 10%;
+    }
+
+    .action{
+        display: none;
     }
     
     .right{
