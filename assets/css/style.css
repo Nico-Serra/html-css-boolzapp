@@ -5,33 +5,33 @@
 }
 
 /* color palette */
-:root{
-    --bool-light:rgba(255, 255, 255, 1);
-    --bool-lighter:rgba(234, 234, 234, 1);
-    --bool-body-primary:rgba(215, 219, 214, 1);
+:root {
+    --bool-light: rgba(255, 255, 255, 1);
+    --bool-lighter: rgba(234, 234, 234, 1);
+    --bool-body-primary: rgba(215, 219, 214, 1);
     --bool-body-secondary: rgba(0, 150, 136, 1);
-    --bool-chat:rgba(213, 249, 186, 1);
-    --bool-sky:rgba(142, 218, 252, 1);
+    --bool-chat: rgba(213, 249, 186, 1);
+    --bool-sky: rgba(142, 218, 252, 1);
     --bool-icon: rgba(177, 177, 177, 1);
     --bool-dark: rgba(0, 0, 0, 1);
 
 }
 
-body{
+body {
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to top, rgba(215, 219, 214, 1) 90% ,rgba(0, 150, 136, 1) 50%);
+    background: linear-gradient(to top, rgba(215, 219, 214, 1) 90%, rgba(0, 150, 136, 1) 50%);
     font-family: 'Lato', sans-serif;
 }
 
-img{
+img {
     max-width: 100%;
     border-radius: 50%;
 }
 
 /* #region utilities */
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
@@ -41,67 +41,68 @@ img{
 
 /* #region Debug */
 
-.debug{
+.debug {
     background-color: red;
-    
+
 }
 
-.debug .web-app{
+.debug .web-app {
     background-color: yellow;
 }
 
-.debug .left{
+.debug .left {
     background-color: aqua;
 }
 
-.debug .right{
+.debug .right {
     background-color: green;
 }
 
-.debug .profile{
+.debug .profile {
     background-color: pink;
-    
+
 }
 
-.debug .notifications{
+.debug .notifications {
     background-color: pink;
     height: 10%;
 }
 
-.debug .search{
-    background-color:lightsalmon;
+.debug .search {
+    background-color: lightsalmon;
     height: 5%;
 }
 
-.debug .contacts{
-    background-color:lightskyblue;
+.debug .contacts {
+    background-color: lightskyblue;
     height: 75%;
 }
 
-.debug .contact{
+.debug .contact {
     background-color: lightgreen;
     height: 10%;
 }
-.debug .chat{
+
+.debug .chat {
     background-color: lightgoldenrodyellow;
     height: 80%;
 }
 
-.debug .write{
+.debug .write {
     background-color: lightgreen;
     height: 10%;
 }
 
-.debug .container-sm{
+.debug .container-sm {
     height: 100%;
 }
 
-.debug .top-chat{
+.debug .top-chat {
     height: 40%;
     background-color: gold;
 }
 
-.debug .bottom-chat{
+.debug .bottom-chat {
     height: 40%;
     background-color: gold;
 }
@@ -111,7 +112,7 @@ img{
 
 /* #region web-app */
 
-.web-app{
+.web-app {
     width: 80%;
     height: 95vh;
     margin: auto;
@@ -121,61 +122,94 @@ img{
 
 /* #region left */
 
-.left{
+.left {
     height: 100%;
     width: 30%;
 }
 
-.profile{
+/* #region profile */
+.profile {
     background-color: var(--bool-lighter);
     height: 10%;
     justify-content: space-between;
+
+}
+
+.pic {
+    aspect-ratio: 1;
+    object-fit: cover;
     padding: 0.5rem;
 
 }
 
-.pic{
-    aspect-ratio: 1;
-    object-fit: cover;
-    
-}
-
-.action{
+.action {
     align-self: center;
+    padding: 0 1rem;
 }
 
-.action a{
+.action a {
     color: var(--bool-icon);
     text-decoration: none;
     font-size: x-large;
     padding: 0 0.5rem;
 }
 
+/* #endregion profile */
+
+/* #region notifications */
+
+.notifications{
+    background-color: var(--bool-sky);
+    height: 10%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notifications .pic{
+    font-size: large;
+}
+
+.pic i{
+    background-color: var(--bool-light);
+    padding: 0.8rem;
+    border-radius: 50%;
+    color: var(--bool-sky);
+}
+
+
+.receive a{
+    color: gray;
+    font-size: 0.8rem;
+}
+/* #endregion notifications */
+
+
 /* #endregion left */
 
 /* #region right */
 
-.right{
+.right {
     height: 100%;
     width: 70%;
 }
 
-.container-sm{
+.container-sm {
     width: 90%;
     margin: auto;
 }
 
-.top-chat{
+.top-chat {
     width: 50%;
     margin-left: 50%;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.bottom-chat{
+.bottom-chat {
     width: 50%;
     margin-right: 50%;
 }
+
 /* #endregion right */
 
 /* #endregion web-app */
@@ -183,43 +217,43 @@ img{
 /* #region @media */
 
 @media screen and (max-width:991px) {
-    .web-app{
-       width: 100%;
-       height: 100vh;
-       margin: 0;
+    .web-app {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
     }
 
-    .left{
+    .left {
         width: 10%;
     }
 
-    .action{
+    .action {
         display: none;
     }
-    
-    .right{
+
+    .right {
         width: 90%;
     }
-    
-    .notifications{
+
+    .notifications {
         display: none;
     }
 
-    .search{
+    .search {
         display: none;
     }
 
-    .debug .contacts{
+    .debug .contacts {
         height: 90%;
     }
 }
 
-@media screen and (max-width:540px){
-    .left{
+@media screen and (max-width:540px) {
+    .left {
         display: none;
     }
-    
-    .right{
+
+    .right {
         width: 100%;
     }
 }
