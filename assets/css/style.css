@@ -137,6 +137,7 @@ img {
     background-color: var(--bool-lighter);
     height: 10vh;
     justify-content: space-between;
+    border-right: 0.1px solid lightgray;
 
 }
 
@@ -232,7 +233,7 @@ img {
     font-size: 0.8rem;
 }
 
-/* #region contacts */
+/* #endregion contacts */
 
 
 
@@ -251,16 +252,64 @@ img {
 }
 
 .top-chat {
-    width: 50%;
-    margin-left: 50%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    width: 70%;
+    margin-left: 30%;
+    background-color: var(--bool-chat);
+    border-radius: 10px;
 }
 
 .bottom-chat {
-    width: 50%;
-    margin-right: 50%;
+    width: 70%;
+    margin-right: 30%;
+    background-color: var(--bool-light);
+    border-radius: 10px;
 }
+
+
+/* #region contact */
+
+.contact{
+    height: 10vh;
+    background-color: var(--bool-lighter);
+}
+
+.name-top{
+    align-self: center;
+    flex-grow: 1;
+}
+
+
+/* #endregion contact */
+
+/* #region chat */
+
+.chat{
+    background-image: url(../img/mine.jpg);
+    height: 75vh;
+    padding: 2rem 0;
+}
+
+.text{
+    padding: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.right-text i{
+    color: gray;
+}
+
+.right-text span{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.right-text{
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* #endregion chat */
+
 
 /* #endregion right */
 
