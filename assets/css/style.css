@@ -21,6 +21,7 @@
 body{
     height: 100vh;
     overflow: hidden;
+    background: linear-gradient(to top, rgba(215, 219, 214, 1) 90% ,rgba(0, 150, 136, 1) 50%);
 }
 
 /* #region Debug */
