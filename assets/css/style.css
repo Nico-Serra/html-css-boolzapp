@@ -62,6 +62,20 @@ body{
     height: 75%;
 }
 
+.debug .contact{
+    background-color: lightgreen;
+    height: 10%;
+}
+.debug .chat{
+    background-color: lightgoldenrodyellow;
+    height: 80%;
+}
+
+.debug .write{
+    background-color: lightgreen;
+    height: 10%;
+}
+
 
 /* #endregion Debug */
 
