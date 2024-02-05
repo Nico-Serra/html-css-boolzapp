@@ -5,7 +5,39 @@
     border: 0.5px dashed black;
 }
 
+/* color palette */
+:root{
+    --bool-light:rgba(255, 255, 255, 1);
+    --bool-lighter:rgba(234, 234, 234, 1);
+    --bool-body-primary:rgba(215, 219, 214, 1);
+    --bool-body-secondary: rgba(0, 150, 136, 1);
+    --bool-chat:rgba(213, 249, 186, 1);
+    --bool-sky:rgba(142, 218, 252, 1);
+    --bool-icon: rgba(177, 177, 177, 1);
+    --bool-dark: rgba(0, 0, 0, 1);
+
+}
+
+/* #region Debug */
+
 .debug{
-    background-color: black;
+    background-color: red;
     height: 100vh;
 }
+
+.debug .web-app{
+    background-color: yellow;
+}
+
+/* #endregion Debug */
+
+/* #region web-app */
+
+.web-app{
+    width: 80%;
+    height: 95vh;
+    margin: auto;
+    margin-top: 2.5vh;
+}
+
+/* #endregion web-app */
