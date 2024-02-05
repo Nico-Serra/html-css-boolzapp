@@ -18,16 +18,29 @@
 
 }
 
+body{
+    height: 100vh;
+}
+
 /* #region Debug */
 
 .debug{
     background-color: red;
-    height: 100vh;
+    
 }
 
 .debug .web-app{
     background-color: yellow;
 }
+
+.debug .left{
+    background-color: aqua;
+}
+
+.debug .right{
+    background-color: green;
+}
+
 
 /* #endregion Debug */
 
@@ -38,6 +51,27 @@
     height: 95vh;
     margin: auto;
     margin-top: 2.5vh;
+    display: flex;
 }
+
+/* #region left */
+
+.left{
+    height: 100%;
+    width: 30%;
+}
+
+
+/* #endregion left */
+
+/* #region right */
+
+.right{
+    height: 100%;
+    width: 70%;
+}
+
+
+/* #endregion right */
 
 /* #endregion web-app */
