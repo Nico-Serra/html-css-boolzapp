@@ -318,6 +318,35 @@ img {
     overflow-y: auto;
 }
 
+.subnav{
+    position: relative;
+}
+
+.subnav-content{
+    float: left;
+    background-color: white;
+    z-index: 1;
+    display: none;
+    position: absolute;
+    right:0;
+    padding: 0.5rem 1rem;
+    width: 200px;
+}
+
+.subnav-content p{
+    padding: 0.5rem 0;
+}
+
+.green{
+    background-color: var(--bool-chat);
+}
+
+.subnav:hover .subnav-content{
+    display: block;
+ }
+
+
+
 /* #endregion chat */
 
 
@@ -405,3 +434,5 @@ img {
 }
 
 /* #endregion @media */
+
+   
