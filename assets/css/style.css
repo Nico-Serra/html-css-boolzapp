@@ -118,7 +118,7 @@ img {
 /* #region web-app */
 
 .web-app {
-    width: 80%;
+    max-width: 1200px;
     height: 95vh;
     margin: auto;
     margin-top: 2.5vh;
@@ -129,17 +129,17 @@ img {
 
 .left {
     height: 100%;
-    width: 30%;
+    min-width: 320px;
 }
 
 /* #region profile */
 .profile {
     background-color: var(--bool-lighter);
-    height: 10vh;
-    justify-content: space-between;
+    height: 55px; 
     border-right: 0.1px solid lightgray;
-
+    gap: 7.5rem;
 }
+
 
 
 
@@ -161,7 +161,7 @@ img {
 
 .notifications{
     background-color: var(--bool-sky);
-    height: 10vh;
+    height: 55px;
     align-items: center;
     gap: 1rem;
 }
@@ -187,7 +187,7 @@ img {
 /* #region search */
 
 .search{
-    height: 7vh;
+    height: 30px;
     background-color: var(--bool-lighter);
     align-items: center;
     color: gray;
@@ -210,13 +210,12 @@ img {
 /* #region contacts */
 
 .contacts{
-    height: 68vh;
+    height: calc(100% - 140px);
     overflow-y: auto;
     background-color: var(--bool-light);
 }
 
 .recent{
-    height: 10vh;
     gap: 1rem;
     border-bottom: 0.1px solid lightgray;
 }
@@ -233,6 +232,11 @@ img {
     font-size: 0.8rem;
 }
 
+.recent .pic{
+    width: 70px;
+}
+
+
 /* #endregion contacts */
 
 
@@ -243,7 +247,7 @@ img {
 
 .right {
     height: 100%;
-    width: 70%;
+    flex-grow: 1;
 }
 
 .container-sm {
@@ -269,7 +273,7 @@ img {
 /* #region contact */
 
 .contact{
-    height: 10vh;
+    height: 55px;
     background-color: var(--bool-lighter);
 }
 
@@ -285,7 +289,7 @@ img {
 
 .chat{
     background-image: url(../img/mine.jpg);
-    height: 75vh;
+    height: calc(100% - 110px);
     padding: 2rem 0;
 }
 
@@ -308,13 +312,18 @@ img {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.chat{
+    overflow-y: auto;
+}
+
 /* #endregion chat */
 
 
 /* #region write */
 
 .write{
-    height: 10vh;
+    height: 55px;
     background-color: var(--bool-lighter);
     justify-content: space-around;
     align-items: center;
@@ -351,31 +360,30 @@ img {
     }
 
     .left {
-        width: 10%;
+        min-width: 80px;
     }
 
     .action, .notifications, .search ,.name ,.hour{
         display: none;
     }
 
-    .right {
-        width: 90%;
-    }
-
     .contacts {
-        height: 90vh;
+        height: calc(100% - 55px);
     }
-
-    .chat{
-        height: 80vh;
-    }
-
     .contact .action{
         display: block;
         padding: 0;
     }
 
-}
+    .recent {
+        justify-content: space-around;
+    }
+
+    .profile{
+        gap: 0;
+        justify-content: space-around;
+    }
+    
 
 @media screen and (max-width:540px) {
     .left {
@@ -384,10 +392,6 @@ img {
 
     .right {
         width: 100%;
-    }
-
-    .chat{
-        overflow-y: auto;
     }
 }
 
