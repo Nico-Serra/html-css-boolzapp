@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+/* html::-webkit-scrollbar {
+    width: auto;
+  }
+
+html::-webkit-scrollbar-track {
+   background-color: lightgray;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: black;
+ } */
+
 /* color palette */
 :root {
     --bool-light: rgba(255, 255, 255, 1);
@@ -29,6 +40,7 @@ img {
     border-radius: 50%;
 }
 
+
 /* #region utilities */
 
 .d-flex {
@@ -41,7 +53,12 @@ img {
     padding: 0.5rem;
 
 }
-/* #region utilities */
+
+.container-sm {
+    width: 90%;
+    margin: auto;
+}
+/* #endregion utilities */
 
 
 /* #region Debug */
@@ -123,6 +140,8 @@ img {
     margin: auto;
     margin-top: 2.5vh;
     display: flex;
+
+    
 }
 
 /* #region left */
@@ -130,69 +149,92 @@ img {
 .left {
     height: 100%;
     min-width: 320px;
+
+    & >.profile {
+        background-color: var(--bool-lighter);
+        height: 55px; 
+        border-right: 0.1px solid lightgray;
+        gap: 7.5rem;
+
+        & >.action {
+            align-self: center;
+            padding: 0 1rem;
+        }
+
+        & >.action a ,.write a{
+            color: var(--bool-icon);
+            text-decoration: none;
+            font-size: x-large;
+            padding: 0 0.5rem;
+        }
+    }
+
+    & >.notifications{
+        background-color: var(--bool-sky);
+        height: 55px;
+        align-items: center;
+        gap: 1rem;
+
+        & >.notifications .pic{
+            font-size: large;
+
+            & >.pic i{
+                background-color: var(--bool-light);
+                padding: 0.8rem;
+                border-radius: 50%;
+                color: var(--bool-sky);
+            }
+        }
+
+        & >.receive a{
+            color: gray;
+            font-size: 0.8rem;
+        }
+    }
+
+    & >.search{
+        height: 30px;
+        background-color: var(--bool-lighter);
+        align-items: center;
+        color: gray;
+    }
+
+    & >.contacts{
+        height: calc(100% - 140px);
+        overflow-y: auto;
+        background-color: var(--bool-light);
+
+        & >.recent{
+            gap: 1rem;
+            border-bottom: 0.1px solid lightgray;
+        }
+        
+    }
+    
 }
 
 /* #region profile */
-.profile {
-    background-color: var(--bool-lighter);
-    height: 55px; 
-    border-right: 0.1px solid lightgray;
-    gap: 7.5rem;
-}
 
 
 
-
-.action {
-    align-self: center;
-    padding: 0 1rem;
-}
-
-.action a ,.write a{
-    color: var(--bool-icon);
-    text-decoration: none;
-    font-size: x-large;
-    padding: 0 0.5rem;
-}
 
 /* #endregion profile */
 
 /* #region notifications */
 
-.notifications{
-    background-color: var(--bool-sky);
-    height: 55px;
-    align-items: center;
-    gap: 1rem;
-}
-
-.notifications .pic{
-    font-size: large;
-}
-
-.pic i{
-    background-color: var(--bool-light);
-    padding: 0.8rem;
-    border-radius: 50%;
-    color: var(--bool-sky);
-}
 
 
-.receive a{
-    color: gray;
-    font-size: 0.8rem;
-}
+
+
+
+
+
+
 /* #endregion notifications */
 
 /* #region search */
 
-.search{
-    height: 30px;
-    background-color: var(--bool-lighter);
-    align-items: center;
-    color: gray;
-    
-}
+
 
 .btn-search{
     gap: 1rem;
@@ -209,16 +251,7 @@ img {
 
 /* #region contacts */
 
-.contacts{
-    height: calc(100% - 140px);
-    overflow-y: auto;
-    background-color: var(--bool-light);
-}
 
-.recent{
-    gap: 1rem;
-    border-bottom: 0.1px solid lightgray;
-}
 
 .name, .hour{
     align-self: center;
@@ -248,12 +281,37 @@ img {
 .right {
     height: 100%;
     flex-grow: 1;
+
+    & >.contact{
+        height: 55px;
+        background-color: var(--bool-lighter);
+    }
+
+    & >.chat{
+        background-image: url(../img/mine.jpg);
+        height: calc(100% - 110px);
+        padding: 2rem 0;
+        overflow-y: auto;
+
+        & >.text{
+            padding: 1rem;
+            margin-bottom: 1rem;
+            
+        }
+    }
+
+    & >.write{
+        height: 55px;
+        background-color: var(--bool-lighter);
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+
+
 }
 
-.container-sm {
-    width: 90%;
-    margin: auto;
-}
+
 
 .top-chat {
     width: 70%;
@@ -272,10 +330,7 @@ img {
 
 /* #region contact */
 
-.contact{
-    height: 55px;
-    background-color: var(--bool-lighter);
-}
+
 
 .name-top{
     align-self: center;
@@ -287,17 +342,9 @@ img {
 
 /* #region chat */
 
-.chat{
-    background-image: url(../img/mine.jpg);
-    height: calc(100% - 110px);
-    padding: 2rem 0;
-}
 
-.text{
-    padding: 1rem;
-    margin-bottom: 1rem;
-    
-}
+
+
 
 .right-text i{
     color: gray;
@@ -314,9 +361,6 @@ img {
     align-items: center;
 }
 
-.chat{
-    overflow-y: auto;
-}
 
 .subnav{
     position: relative;
@@ -352,12 +396,6 @@ img {
 
 /* #region write */
 
-.write{
-    height: 55px;
-    background-color: var(--bool-lighter);
-    justify-content: space-around;
-    align-items: center;
-}
 
 .write-here{
     background-color: var(--bool-light);
@@ -434,5 +472,3 @@ img {
 }
 
 /* #endregion @media */
-
-   
