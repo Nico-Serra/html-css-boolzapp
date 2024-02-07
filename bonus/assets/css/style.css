@@ -4,17 +4,6 @@
     box-sizing: border-box;
 }
 
-/* html::-webkit-scrollbar {
-    width: auto;
-  }
-
-html::-webkit-scrollbar-track {
-   background-color: lightgray;
-}
-html::-webkit-scrollbar-thumb {
-    background-color: black;
- } */
-
 /* color palette */
 :root {
     --bool-light: rgba(255, 255, 255, 1);
@@ -58,6 +47,7 @@ img {
     width: 90%;
     margin: auto;
 }
+
 /* #endregion utilities */
 
 
@@ -141,7 +131,7 @@ img {
     margin-top: 2.5vh;
     display: flex;
 
-    
+
 }
 
 /* #region left */
@@ -150,18 +140,19 @@ img {
     height: 100%;
     min-width: 320px;
 
-    & >.profile {
+    &>.profile {
         background-color: var(--bool-lighter);
-        height: 55px; 
+        height: 55px;
         border-right: 0.1px solid lightgray;
         gap: 7.5rem;
 
-        & >.action {
+        & .action {
             align-self: center;
             padding: 0 1rem;
         }
 
-        & >.action a ,.write a{
+        & .action a,
+        .write a {
             color: var(--bool-icon);
             text-decoration: none;
             font-size: x-large;
@@ -169,16 +160,16 @@ img {
         }
     }
 
-    & >.notifications{
+    &>.notifications {
         background-color: var(--bool-sky);
         height: 55px;
         align-items: center;
         gap: 1rem;
 
-        & >.notifications .pic{
+        &>.notifications .pic {
             font-size: large;
 
-            & >.pic i{
+            &>.pic i {
                 background-color: var(--bool-light);
                 padding: 0.8rem;
                 border-radius: 50%;
@@ -186,31 +177,43 @@ img {
             }
         }
 
-        & >.receive a{
+        &>.receive a {
             color: gray;
             font-size: 0.8rem;
         }
     }
 
-    & >.search{
+    &>.search {
         height: 30px;
         background-color: var(--bool-lighter);
         align-items: center;
         color: gray;
     }
 
-    & >.contacts{
+    &>.contacts {
         height: calc(100% - 140px);
         overflow-y: auto;
         background-color: var(--bool-light);
 
-        & >.recent{
+        ::-webkit-scrollbar {
+            width: auto;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: lightgray;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: black;
+        }
+
+        &>.recent {
             gap: 1rem;
             border-bottom: 0.1px solid lightgray;
         }
-        
+
     }
-    
+
 }
 
 /* #region profile */
@@ -236,7 +239,7 @@ img {
 
 
 
-.btn-search{
+.btn-search {
     gap: 1rem;
     background-color: var(--bool-light);
     padding: 0.3rem 1rem;
@@ -244,28 +247,31 @@ img {
     margin: auto;
 }
 
-.btn-search a{
+.btn-search a {
     color: gray;
 }
+
 /* #endregion search */
 
 /* #region contacts */
 
 
 
-.name, .hour{
+.name,
+.hour {
     align-self: center;
 }
 
-.recent p, .recent span{
+.recent p,
+.recent span {
     color: gray;
 }
 
-.recent span{
+.recent span {
     font-size: 0.8rem;
 }
 
-.recent .pic{
+.recent .pic {
     width: 70px;
 }
 
@@ -282,31 +288,27 @@ img {
     height: 100%;
     flex-grow: 1;
 
-    & >.contact{
+    .contact {
         height: 55px;
         background-color: var(--bool-lighter);
     }
 
-    & >.chat{
+    .chat {
         background-image: url(../img/mine.jpg);
         height: calc(100% - 110px);
         padding: 2rem 0;
         overflow-y: auto;
 
-        & >.text{
-            padding: 1rem;
-            margin-bottom: 1rem;
-            
-        }
+
     }
 
-    & >.write{
+    .write {
         height: 55px;
         background-color: var(--bool-lighter);
         justify-content: space-around;
         align-items: center;
     }
-    
+
 
 
 }
@@ -332,7 +334,7 @@ img {
 
 
 
-.name-top{
+.name-top {
     align-self: center;
     flex-grow: 1;
 }
@@ -343,51 +345,55 @@ img {
 /* #region chat */
 
 
+.text {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+}
 
 
-
-.right-text i{
+.right-text i {
     color: gray;
 }
 
-.right-text span{
+.right-text span {
     color: gray;
     font-size: 0.8rem;
 }
 
-.right-text{
+.right-text {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 
-.subnav{
+.subnav {
     position: relative;
 }
 
-.subnav-content{
+.subnav-content {
     float: left;
     background-color: white;
     z-index: 1;
     display: none;
     position: absolute;
-    right:0;
+    right: 0;
     padding: 0.5rem 1rem;
     width: 200px;
 }
 
-.subnav-content p{
+.subnav-content p {
     padding: 0.5rem 0;
 }
 
-.green{
+.green {
     background-color: var(--bool-chat);
 }
 
-.subnav:hover .subnav-content{
+.subnav:hover .subnav-content {
     display: block;
- }
+}
 
 
 
@@ -397,15 +403,15 @@ img {
 /* #region write */
 
 
-.write-here{
+.write-here {
     background-color: var(--bool-light);
     width: 80%;
     border-radius: 5px;
-    
-    
+
+
 }
 
-.write a:nth-child(2){
+.write a:nth-child(2) {
     color: gray;
     font-size: 0.8rem;
     padding: 0.8rem;
@@ -431,14 +437,19 @@ img {
         min-width: 80px;
     }
 
-    .action, .notifications, .search ,.name ,.hour{
+    .action,
+    .notifications,
+    .search,
+    .name,
+    .hour {
         display: none;
     }
 
     .contacts {
         height: calc(100% - 55px);
     }
-    .contact .action{
+
+    .contact .action {
         display: block;
         padding: 0;
     }
@@ -447,28 +458,28 @@ img {
         justify-content: space-around;
     }
 
-    .profile{
+    .profile {
         gap: 0;
         justify-content: space-around;
     }
-    
 
-@media screen and (max-width:540px) {
-    .left {
-        display: none;
+
+    @media screen and (max-width:540px) {
+        .left {
+            display: none;
+        }
+
+        .right {
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .write-here {
+            width: 90%;
+        }
     }
 
-    .right {
-        width: 100%;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    .write-here{
-        width: 90%;
-    }
-}
-
-/* #endregion @media */
+    /* #endregion @media */
