@@ -19,8 +19,8 @@ body{
 }
 
 ::-webkit-scrollbar-button{
-    height: 5px;
-    width: 5px;
+    height: 50px;
+    width: 200px;
 }
 
 .d-flex{
@@ -107,11 +107,17 @@ body{
     }
 }
 
+.right-menu{
+   width: 80%;
+}
+
+
 .top-category{
     height: 50px;
     gap: 1rem;
-    padding-left: 1rem;
+    padding: 0 1rem;
     overflow-x: auto;
+    
    
     .all{
         background-color: black;
@@ -119,5 +125,20 @@ body{
         border-radius: 10px;
         padding: 0.5rem;
         align-self: center;
+    }
+}
+
+.videos{
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+
+    .video{
+        width: 300px;
+        height: 150px;
+        background-color: skyblue;
+        
     }
 }
